@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  accounts:
+    image: dilipkumarmj/accounts:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - dilip-network
+
+  loans:
+    image: dilipkumarmj/loans:latest
+    ports:
+      - "8090:8090"
+    networks:
+      - dilip-network
+
+  cards:
+    image: dilipkumarmj/cards:latest
+    ports:
+      - "9000:9000"
+    networks:
+      - dilip-network
+
+networks:
+  dilip-network:
+
